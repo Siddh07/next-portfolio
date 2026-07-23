@@ -88,6 +88,28 @@ export const workExperience: ExperienceItem[] = [
 
 export const educationHistory: ExperienceItem[] = [
   {
+    id: 'msc-it',
+    role: 'Masters in Information Technology (M.Sc. IT)',
+    company: 'Nepal College of Information Technology (NCIT)',
+    location: 'Kathmandu, Nepal',
+    period: '2026 - Present',
+    type: 'education',
+    logo: '/assets/img/education/Herald-College.png',
+    description: 'Pursuing Master of Science in IT focused on Advanced Software Engineering, Cloud Architectures, and Enterprise Systems.',
+    details: [
+      'Advanced Software Engineering & Cloud Architectures',
+      'Enterprise Systems Modeling & Distributed Architectures',
+      'Advanced Web Engineering & Full-Stack Systems'
+    ],
+    coursework: [
+      'Advanced Software Engineering',
+      'Cloud Architectures',
+      'Distributed Systems',
+      'Enterprise Systems Modeling'
+    ],
+    skills: ['M.Sc. IT', 'Software Architecture', 'Distributed Systems', 'Cloud Systems']
+  },
+  {
     id: 'herald',
     role: 'Bachelors in Information Technology',
     company: 'Herald College Kathmandu (University of Wolverhampton)',

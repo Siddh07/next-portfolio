@@ -226,8 +226,8 @@ export default function Hero() {
               </div>
               <div className="p-3.5 rounded-2xl border border-white/10 bg-neutral-900/50 backdrop-blur-md text-left">
                 <span className="text-xs font-semibold text-gray-400 block">Education</span>
-                <span className="text-sm font-bold text-white block truncate">Herald College</span>
-                <span className="text-[11px] text-gray-500 block">B.Sc. IT (UK Degree)</span>
+                <span className="text-sm font-bold text-white block truncate">NCIT</span>
+                <span className="text-[11px] text-emerald-400 font-semibold block truncate">M.Sc. IT (2026-Pres)</span>
               </div>
               <div className="p-3.5 rounded-2xl border border-white/10 bg-neutral-900/50 backdrop-blur-md text-left">
                 <span className="text-xs font-semibold text-gray-400 block">Experience</span>
@@ -337,7 +337,7 @@ export default function Hero() {
                       TypeScript & Node
                     </span>
                     <span className="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-emerald-500/20 backdrop-blur-md text-emerald-400 border border-emerald-500/30">
-                      B.Sc. IT (Herald)
+                      M.Sc. IT (NCIT)
                     </span>
                   </div>
                 </div>
