@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   keywords: ["Siddhant Shrestha", "Full Stack Developer", "Next.js", "React", "Portfolio", "WordPress Development", "Nepal Systems", "Creative Technologist", "Tailwind CSS"],
   authors: [{ name: "Siddhant Shrestha" }],
   creator: "Siddhant Shrestha",
+  icons: {
+    icon: "/assets/img/profile.png",
+    shortcut: "/assets/img/profile.png",
+    apple: "/assets/img/profile.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",

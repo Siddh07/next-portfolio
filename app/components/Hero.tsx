@@ -299,7 +299,7 @@ export default function Hero() {
                 
                 {/* Photo Layer */}
                 <img
-                  src="/assets/img/profile.png"
+                  src="/assets/img/hero/profile.png"
                   alt="Siddhant Shrestha"
                   className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 />

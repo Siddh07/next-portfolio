@@ -77,17 +77,17 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* 4-Column Footer Grid */}
+        {/* 3-Column Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
           
-          {/* Column 1: Brand & Profile (4 Cols) */}
-          <div className="lg:col-span-4 space-y-4">
+          {/* Column 1: Brand & Profile (5 Cols) */}
+          <div className="lg:col-span-5 space-y-4">
             <Link href="/#home" className="flex items-center gap-3 group w-fit">
-              <div className="w-10 h-10 rounded-2xl bg-neutral-900 border border-emerald-500/40 overflow-hidden shadow-lg shadow-emerald-500/10 group-hover:border-emerald-400 group-hover:scale-105 transition-all">
+              <div className="w-10 h-10 rounded-full bg-neutral-900 border border-emerald-500/40 overflow-hidden shadow-lg shadow-emerald-500/10 group-hover:border-emerald-400 group-hover:scale-105 transition-all">
                 <img
-                  src="/assets/img/profile.png"
+                  src="/assets/img/circle-logo.png"
                   alt="Siddhant Shrestha logo"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-top rounded-full"
                 />
               </div>
               <div>
@@ -103,13 +103,6 @@ export default function Footer() {
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
               Passionate about engineering full-stack web platforms with React, Next.js & TypeScript, and building scalable API backend systems.
             </p>
-
-            <div className="pt-1 flex items-center gap-2">
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                Available for New Projects
-              </span>
-            </div>
           </div>
 
           {/* Column 2: Navigation Links (3 Cols) */}
@@ -119,41 +112,26 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-sm text-gray-400 font-medium">
               <li>
-                <Link href="/#home" className="hover:text-emerald-400 transition-colors">Home Overview</Link>
+                <Link href="/#home" className="hover:text-emerald-400 transition-colors">Home </Link>
               </li>
               <li>
-                <Link href="/#about" className="hover:text-emerald-400 transition-colors">About & Philosophy</Link>
+                <Link href="/#about" className="hover:text-emerald-400 transition-colors">About</Link>
               </li>
               <li>
-                <Link href="/#projects" className="hover:text-emerald-400 transition-colors">Featured Projects</Link>
+                <Link href="/#projects" className="hover:text-emerald-400 transition-colors">Projects</Link>
               </li>
               <li>
                 <Link href="/#journey" className="hover:text-emerald-400 transition-colors">Experience & Education</Link>
               </li>
               <li>
-                <Link href="/#skills" className="hover:text-emerald-400 transition-colors">Skills & Stack</Link>
+                <Link href="/#skills" className="hover:text-emerald-400 transition-colors">Skills</Link>
               </li>
               <li>
-                <Link href="/#contact" className="hover:text-emerald-400 transition-colors">Contact Form</Link>
+                <Link href="/#contact" className="hover:text-emerald-400 transition-colors">Contact</Link>
               </li>
               <li>
-                <Link href="/resume" className="hover:text-emerald-400 transition-colors">Curriculum Vitae (CV)</Link>
+                <Link href="/resume" className="hover:text-emerald-400 transition-colors">Resume</Link>
               </li>
-            </ul>
-          </div>
-
-          {/* Column 3: Expertise & Core Domains (2 Cols) */}
-          <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white">
-              Domains
-            </h4>
-            <ul className="space-y-2 text-sm text-gray-400 font-medium">
-              <li className="hover:text-emerald-400 transition-colors cursor-default">React & Next.js</li>
-              <li className="hover:text-emerald-400 transition-colors cursor-default">TypeScript & Tailwind</li>
-              <li className="hover:text-emerald-400 transition-colors cursor-default">Node.js & Express</li>
-              <li className="hover:text-emerald-400 transition-colors cursor-default">SQL & Database Systems</li>
-              <li className="hover:text-emerald-400 transition-colors cursor-default">Laravel & PHP</li>
-              <li className="hover:text-emerald-400 transition-colors cursor-default">REST APIs & Full-Stack</li>
             </ul>
           </div>
 
@@ -212,9 +190,15 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom Bar: Copyright & Back To Top */}
+        {/* Bottom Bar: Copyright, Credit & Back To Top */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400 font-medium">
-          <p>© {new Date().getFullYear()} Siddhant Shrestha. All rights reserved.</p>
+          <div className="flex flex-wrap items-center gap-2 text-center md:text-left">
+            <p>© {new Date().getFullYear()} Siddhant Shrestha. All rights reserved.</p>
+            <span className="hidden md:inline text-gray-600">•</span>
+            <p className="text-gray-400">
+              Designed & Developed by <span className="text-emerald-400 font-semibold">Pujan Joshi</span>
+            </p>
+          </div>
           
           <div className="flex items-center gap-4">
             <span className="hidden sm:inline text-gray-400">Engineered with Next.js Turbopack & Tailwind CSS</span>

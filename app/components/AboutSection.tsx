@@ -30,7 +30,7 @@ export default function AboutSection() {
               
               <div className="relative w-full h-full rounded-3xl overflow-hidden bg-neutral-900 border border-white/10 shadow-2xl">
                 <img
-                  src="/assets/img/profile.png"
+                  src="/assets/img/hero/hero-img.jpg"
                   alt="Siddhant Shrestha fullstack developer at zylux"
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700"
                 />
@@ -80,7 +80,7 @@ export default function AboutSection() {
           <div className="lg:col-span-7 space-y-8">
             <div>
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-400 block mb-2">
-                01 / ABOUT ME
+               ABOUT ME
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-gradient tracking-tight">
                 About Siddhant Shrestha

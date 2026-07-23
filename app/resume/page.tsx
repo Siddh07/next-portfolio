@@ -32,7 +32,7 @@ export default function ResumePage() {
       </div>
 
       {/* Header section */}
-      <section className="relative pt-36 pb-10 px-6 text-center overflow-hidden print:hidden">
+      <section className="relative pt-26 pb-10 px-6 text-center overflow-hidden print:hidden">
         <div className="max-w-4xl mx-auto space-y-4">
           <Link
             href="/"
@@ -41,9 +41,6 @@ export default function ResumePage() {
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to Home
           </Link>
-          <h1 className="text-4xl sm:text-5xl font-extrabold font-display text-gradient tracking-tight">
-            Resume / Curriculum Vitae
-          </h1>
           <p className="text-gray-400 max-w-xl mx-auto text-base">
             Siddhant Shrestha — Full-Stack Developer at Zylux.
           </p>

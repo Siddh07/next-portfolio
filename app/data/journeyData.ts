@@ -27,7 +27,7 @@ export const workExperience: ExperienceItem[] = [
     role: 'Full-Stack Developer',
     company: 'Zylux',
     location: 'Kathmandu, Nepal',
-    period: 'Nov 2023 - Present',
+    period: 'April 2026 - Present',
     type: 'work',
     description: 'Architecting and engineering modern full-stack web applications, REST APIs, and responsive user interfaces.',
     details: [

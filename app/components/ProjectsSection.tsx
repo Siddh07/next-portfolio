@@ -1,7 +1,7 @@
 'use client'
 
-import { useState } from 'react'
-import { Sparkles, Globe, ExternalLink, X, Code2, Terminal, BarChart3, Database, Layers } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { Sparkles, Globe, ExternalLink, X, Code2, Terminal, BarChart3, Database, Layers, Star, GitFork, RefreshCw } from 'lucide-react'
 import { projectsData, Project } from '../data/projectsData'
 
 const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -11,15 +11,88 @@ const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
+interface GithubRepo {
+  id: number
+  name: string
+  full_name: string
+  description: string | null
+  html_url: string
+  homepage: string | null
+  stargazers_count: number
+  forks_count: number
+  language: string | null
+  topics?: string[]
+  updated_at: string
+}
+
 export default function ProjectsSection() {
   const [activeCategory, setActiveCategory] = useState<string>('All')
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const [githubProjects, setGithubProjects] = useState<Project[]>([])
+  const [loadingGithub, setLoadingGithub] = useState<boolean>(true)
 
-  const categories = ['All', 'Full-Stack', 'Front-End', 'Data Analysis', 'Web']
+  useEffect(() => {
+    async function fetchGithubRepos() {
+      try {
+        const res = await fetch('https://api.github.com/users/Siddh07/repos?sort=pushed&per_page=15')
+        if (res.ok) {
+          const repos: GithubRepo[] = await res.json()
+          
+          const formatted: Project[] = repos.map((repo) => {
+            const isKnownCategory = repo.language === 'Python' ? 'Data Analysis' : repo.language === 'TypeScript' || repo.language === 'JavaScript' ? 'Full-Stack' : 'Web'
+            
+            return {
+              id: `gh-${repo.id}`,
+              title: repo.name.replace(/-/g, ' ').replace(/_/g, ' '),
+              description: repo.description || `Dynamic GitHub repository (${repo.name}) by Siddhant Shrestha.`,
+              fullDescription: `Repository ${repo.full_name} fetched dynamically live from GitHub. Built with ${repo.language || 'modern web technologies'}. Stars: ${repo.stargazers_count}, Forks: ${repo.forks_count}. Last updated on ${new Date(repo.updated_at).toLocaleDateString()}.`,
+              tech: repo.language ? [repo.language, 'GitHub Live'] : ['GitHub', 'TypeScript'],
+              liveUrl: repo.homepage && repo.homepage.startsWith('http') ? repo.homepage : repo.html_url,
+              repoUrl: repo.html_url,
+              image: '/assets/img/hero/profile.png',
+              color: 'from-emerald-600 to-teal-500',
+              glowColor: '#10b981',
+              category: isKnownCategory,
+              featured: true,
+              tags: ['GitHub', repo.language || 'Code', 'Live']
+            }
+          })
+          setGithubProjects(formatted)
+        }
+      } catch (e) {
+        console.error('Failed to load dynamic GitHub repos', e)
+      } finally {
+        setLoadingGithub(false)
+      }
+    }
+
+    fetchGithubRepos()
+  }, [])
+
+  const categories = ['All', 'Live GitHub Repos', 'Full-Stack', 'Front-End', 'Data Analysis', 'Web']
+
+  // Merge dynamic GitHub projects with static dataset, avoiding duplicates by title/url
+  const combinedProjects = () => {
+    if (githubProjects.length === 0) return projectsData
+    const staticMap = new Map(projectsData.map(p => [p.title.toLowerCase(), p]))
+    
+    // Add dynamic repos
+    const list = [...githubProjects]
+    projectsData.forEach(p => {
+      if (!list.some(gh => gh.title.toLowerCase() === p.title.toLowerCase() || (p.repoUrl && gh.repoUrl?.toLowerCase() === p.repoUrl.toLowerCase()))) {
+        list.push(p)
+      }
+    })
+    return list
+  }
+
+  const allProjects = combinedProjects()
 
   const filteredProjects = activeCategory === 'All'
-    ? projectsData
-    : projectsData.filter(p => p.category === activeCategory || p.tags?.includes(activeCategory))
+    ? allProjects
+    : activeCategory === 'Live GitHub Repos'
+      ? githubProjects
+      : allProjects.filter(p => p.category === activeCategory || p.tags?.includes(activeCategory))
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -45,14 +118,18 @@ export default function ProjectsSection() {
         {/* Section Title */}
         <div className="text-center mb-14 space-y-3">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-[0.2em]">
-            <Code2 className="w-3.5 h-3.5" />
-            <span>Featured Creations</span>
+            <GithubIcon className="w-3.5 h-3.5 text-emerald-400" />
+            <span>Featured Creations & GitHub Live</span>
+            <span className="relative flex h-2 w-2 ml-0.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-gradient tracking-tight">
-            Recent Projects & Systems
+            Featured Creations
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto text-base sm:text-lg">
-            Explore web applications, data analytics pipelines, and full-stack software systems engineered with React, TypeScript & Python.
+            Explore live public projects fetched dynamically from <a href="https://github.com/Siddh07" target="_blank" rel="noopener noreferrer" className="text-emerald-400 underline font-semibold">GitHub @Siddh07</a>, full-stack systems, and data analytics pipelines.
           </p>
           <div className="mx-auto h-1 w-20 bg-gradient-to-r from-emerald-500 to-cyan-400 rounded-full mt-4" />
         </div>
@@ -63,13 +140,14 @@ export default function ProjectsSection() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2 rounded-xl text-xs font-bold transition-all duration-300 capitalize ${
+              className={`px-5 py-2 rounded-xl text-xs font-bold transition-all duration-300 capitalize flex items-center gap-1.5 ${
                 activeCategory === cat
                   ? 'bg-emerald-500 text-neutral-950 shadow-lg shadow-emerald-500/25 scale-105'
                   : 'bg-white/5 border border-white/10 text-gray-300 hover:border-emerald-500/40 hover:text-emerald-400'
               }`}
             >
-              {cat}
+              {cat === 'Live GitHub Repos' && <GithubIcon className="w-3.5 h-3.5" />}
+              <span>{cat}</span>
             </button>
           ))}
         </div>
@@ -153,15 +231,17 @@ export default function ProjectsSection() {
                       </a>
                     )}
 
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-neutral-950 text-xs font-bold transition-all shadow-md shadow-emerald-500/20 flex items-center justify-center gap-1.5"
-                    >
-                      <Globe className="w-4 h-4" />
-                      <span>Live Site</span>
-                    </a>
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-neutral-950 text-xs font-bold transition-all shadow-md shadow-emerald-500/20 flex items-center justify-center gap-1.5"
+                      >
+                        <Globe className="w-4 h-4" />
+                        <span>Live Site</span>
+                      </a>
+                    )}
                   </div>
                 </div>
 
@@ -244,15 +324,17 @@ export default function ProjectsSection() {
                 </a>
               )}
 
-              <a
-                href={selectedProject.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-neutral-950 text-xs font-bold flex items-center gap-2 shadow-lg shadow-emerald-500/20"
-              >
-                <ExternalLink className="w-4 h-4" />
-                <span>Visit Live Project</span>
-              </a>
+              {selectedProject.liveUrl && (
+                <a
+                  href={selectedProject.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-neutral-950 text-xs font-bold flex items-center gap-2 shadow-lg shadow-emerald-500/20"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  <span>Visit Live Project</span>
+                </a>
+              )}
             </div>
 
           </div>

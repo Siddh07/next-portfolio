@@ -34,9 +34,9 @@ export default function Navbar() {
           <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-neutral-900 border border-emerald-500/40 overflow-hidden shadow-lg shadow-emerald-500/10 group-hover:border-emerald-400 group-hover:scale-105 transition-all duration-300">
             <div className="absolute inset-0 bg-emerald-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <img
-              src="/assets/img/profile.png"
+              src="/assets/img/circle-logo.png"
               alt="Siddhant Shrestha logo"
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-cover object-top rounded-full"
             />
           </div>
           <span className="text-xl md:text-2xl font-bold font-display text-white group-hover:text-emerald-400 transition-colors tracking-tight">
