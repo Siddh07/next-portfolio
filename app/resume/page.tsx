@@ -1,5 +1,4 @@
-'use client'
-
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowLeft, Mail, Phone, MapPin, Download, Briefcase, GraduationCap, Code2, Sparkles, Award } from 'lucide-react'
 import Navbar from '../components/Navbar'
@@ -7,6 +6,25 @@ import Footer from '../components/Footer'
 import { workExperience, educationHistory, certificationsData } from '../data/journeyData'
 import { projectsData } from '../data/projectsData'
 import { skillsCategories } from '../data/skillsData'
+
+export const metadata: Metadata = {
+  title: "Siddhant Shrestha | Resume & Experience",
+  description: "Explore the professional experience, education, verified certifications, and technical skill set of Siddhant Shrestha, Full-Stack Developer at Zylux.",
+  alternates: {
+    canonical: "/resume",
+  },
+  openGraph: {
+    title: "Siddhant Shrestha | Resume & Experience",
+    description: "Explore the professional experience, education, verified certifications, and technical skill set of Siddhant Shrestha, Full-Stack Developer at Zylux.",
+    url: "https://siddhantshrestha.com.np/resume",
+    type: "profile",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Siddhant Shrestha | Resume & Experience",
+    description: "Explore the professional experience, education, verified certifications, and technical skill set of Siddhant Shrestha, Full-Stack Developer at Zylux.",
+  }
+}
 
 const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -63,12 +81,37 @@ export default function ResumePage() {
       <section className="py-8 px-4 sm:px-8 max-w-4xl mx-auto relative z-10 print:py-0 print:px-0">
         <div className="rounded-3xl border border-white/10 bg-neutral-900/60 p-8 sm:p-12 shadow-2xl space-y-10 print:shadow-none print:border-none print:p-0 print:bg-white print:text-black">
           
+          {/* Breadcrumb Schema */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://siddhantshrestha.com.np"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Resume",
+                    "item": "https://siddhantshrestha.com.np/resume"
+                  }
+                ]
+              })
+            }}
+          />
+
           {/* Header Bar */}
           <div className="border-b border-white/10 pb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 print:border-slate-300">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight print:text-black">
+              <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight print:text-black">
                 Siddhant Shrestha
-              </h2>
+              </h1>
               <p className="text-emerald-400 font-bold text-lg mt-1 uppercase tracking-wider print:text-emerald-700">
                 Full-Stack Developer @ Zylux
               </p>

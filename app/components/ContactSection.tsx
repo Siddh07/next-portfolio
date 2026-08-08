@@ -74,7 +74,7 @@ export default function ContactSection() {
             <div className="p-6 rounded-3xl border border-white/10 bg-neutral-900/60 backdrop-blur-xl shadow-xl flex items-center gap-4">
               <div className="w-14 h-14 rounded-2xl bg-neutral-900 border border-emerald-500/40 overflow-hidden shadow-lg shadow-emerald-500/10 shrink-0">
                 <img
-                  src="/assets/img/profile.png"
+                  src="/assets/img/hero/profile.png"
                   alt="Siddhant Shrestha"
                   className="w-full h-full object-cover object-top"
                 />
