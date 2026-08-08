@@ -21,7 +21,7 @@ export const projectsData: Project[] = [
     description: 'Modern developer portfolio showcasing web engineering projects, certifications, and software development achievements.',
     fullDescription: 'Designed and built with Next.js, React, TypeScript, and Tailwind CSS. Features dynamic project showcases, responsive dark mode spotlight aesthetics, interactive timeline layouts, and seamless GitHub integrations.',
     tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
-    liveUrl: 'https://siddhantshrestha.com.np',
+    liveUrl: 'https://www.siddhant-shrestha.com.np',
     repoUrl: 'https://github.com/Siddh07/next-portfolio',
     image: '/assets/img/hero/profile.png',
     color: 'from-emerald-600 to-teal-500',

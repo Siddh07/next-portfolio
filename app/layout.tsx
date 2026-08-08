@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://siddhantshrestha.com.np"),
+  metadataBase: new URL("https://www.siddhant-shrestha.com.np"),
   title: "Siddhant Shrestha | Full Stack Developer & Creative Technologist",
   description: "Personal portfolio of Siddhant Shrestha, a Full Stack Developer specializing in building exceptional digital experiences, modern web applications, custom WordPress platforms, and creative technology solutions.",
   keywords: ["Siddhant Shrestha", "Full Stack Developer", "Next.js", "React", "Portfolio", "WordPress Development", "Nepal Systems", "Creative Technologist", "Tailwind CSS"],
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://siddhantshrestha.com.np",
+    url: "https://www.siddhant-shrestha.com.np",
     siteName: "Siddhant Shrestha Portfolio",
     title: "Siddhant Shrestha | Full Stack Developer & Creative Technologist",
     description: "Personal portfolio of Siddhant Shrestha, a Full Stack Developer specializing in building exceptional digital experiences, modern web applications, and creative technology solutions.",
@@ -36,7 +36,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Siddhant Shrestha",
-    "url": "https://siddhantshrestha.com.np",
+    "url": "https://www.siddhant-shrestha.com.np",
     "jobTitle": "Full-Stack Developer",
     "worksFor": {
       "@type": "Organization",
@@ -52,7 +52,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Siddhant Shrestha Portfolio",
-    "url": "https://siddhantshrestha.com.np"
+    "url": "https://www.siddhant-shrestha.com.np"
   };
 
   return (

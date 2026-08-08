@@ -172,7 +172,7 @@ export default async function Image() {
               letterSpacing: '0.05em',
             }}
           >
-            siddhantshrestha.com.np
+            www.siddhant-shrestha.com.np
           </span>
         </div>
       </div>

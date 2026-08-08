@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Siddhant Shrestha | Resume & Experience",
     description: "Explore the professional experience, education, verified certifications, and technical skill set of Siddhant Shrestha, Full-Stack Developer at Zylux.",
-    url: "https://siddhantshrestha.com.np/resume",
+    url: "https://www.siddhant-shrestha.com.np/resume",
     type: "profile",
   },
   twitter: {
@@ -93,13 +93,13 @@ export default function ResumePage() {
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://siddhantshrestha.com.np"
+                    "item": "https://www.siddhant-shrestha.com.np"
                   },
                   {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Resume",
-                    "item": "https://siddhantshrestha.com.np/resume"
+                    "item": "https://www.siddhant-shrestha.com.np/resume"
                   }
                 ]
               })
