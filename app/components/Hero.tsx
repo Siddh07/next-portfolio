@@ -159,10 +159,10 @@ export default function Hero() {
 
   return (
     <section id="home" className="min-h-screen flex flex-col justify-center pt-32 pb-20 relative overflow-hidden bg-neutral-950">
-      
+
       {/* Background Radial Mask & Grid Pattern */}
-      <div 
-        className="absolute inset-0 opacity-[0.15] pointer-events-none" 
+      <div
+        className="absolute inset-0 opacity-[0.15] pointer-events-none"
         style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.3) 1px, transparent 0)`,
           backgroundSize: '36px 36px'
@@ -175,10 +175,10 @@ export default function Hero() {
 
       <div className="container px-4 md:px-8 mx-auto relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* Left Main Content Column (7 Cols) */}
           <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
-            
+
             {/* Status Pill Badge */}
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-neutral-900/80 border border-emerald-500/30 backdrop-blur-md shadow-lg shadow-emerald-500/5 animate-fade-in">
               <span className="relative flex h-2.5 w-2.5">
@@ -196,7 +196,7 @@ export default function Hero() {
               <span className="text-sm md:text-base font-bold uppercase tracking-[0.25em] text-emerald-400 block">
                 Full-Stack Engineer & Web Solutions Architect
               </span>
-              
+
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold font-display text-white tracking-tight leading-[1.1]">
                 Siddhant <span className="text-gradient">Shrestha</span>
               </h1>
@@ -246,7 +246,7 @@ export default function Hero() {
                 <span>Explore Projects</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
-              
+
               <Link
                 href="/resume"
                 className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-emerald-500/40 font-semibold text-base transition-all duration-300 backdrop-blur-md hover:-translate-y-0.5"
@@ -276,7 +276,7 @@ export default function Hero() {
                   <LinkedinIcon />
                 </a>
                 <a
-                  href="mailto:shresthasiddhant128@gmail.com"
+                  href="mailto:sidd.hant.1793@gmail.com"
                   className="p-3 rounded-xl bg-neutral-900 border border-white/10 text-gray-400 hover:text-emerald-400 hover:border-emerald-500/40 transition-all"
                   aria-label="Email Siddhant"
                 >
@@ -290,13 +290,13 @@ export default function Hero() {
           {/* Right Column: Visual Portrait Bento Card (5 Cols) */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-[420px] aspect-[4/5] rounded-3xl p-1 bg-gradient-to-b from-emerald-500/40 via-white/10 to-transparent shadow-2xl shadow-emerald-500/10 group">
-              
+
               {/* Outer Glow Halo */}
               <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/30 to-cyan-500/30 rounded-[32px] blur-xl opacity-50 group-hover:opacity-80 transition duration-700 pointer-events-none" />
 
               {/* Main Card Frame */}
               <div className="relative w-full h-full rounded-[28px] overflow-hidden bg-neutral-900 border border-white/10 flex flex-col justify-end p-6">
-                
+
                 {/* Photo Layer */}
                 <img
                   src="/assets/img/hero/profile.png"

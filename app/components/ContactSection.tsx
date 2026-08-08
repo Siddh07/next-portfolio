@@ -48,7 +48,7 @@ export default function ContactSection() {
       <div className="absolute bottom-0 left-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-[140px] pointer-events-none opacity-30"></div>
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-        
+
         {/* Section Title */}
         <div className="text-center mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-[0.2em]">
@@ -66,10 +66,10 @@ export default function ContactSection() {
 
         {/* Grid Container */}
         <div className="grid lg:grid-cols-12 gap-12 max-w-6xl mx-auto items-start">
-          
+
           {/* Contact Info Cards (5 Cols) */}
           <div className="lg:col-span-5 space-y-6">
-            
+
             {/* Identity Card */}
             <div className="p-6 rounded-3xl border border-white/10 bg-neutral-900/60 backdrop-blur-xl shadow-xl flex items-center gap-4">
               <div className="w-14 h-14 rounded-2xl bg-neutral-900 border border-emerald-500/40 overflow-hidden shadow-lg shadow-emerald-500/10 shrink-0">
@@ -90,7 +90,7 @@ export default function ContactSection() {
 
             {/* Email Card */}
             <a
-              href="mailto:shresthasiddhant128@gmail.com"
+              href="mailto:sidd.hant.1793@gmail.com"
               className="p-6 rounded-3xl border border-white/10 bg-neutral-900/40 hover:border-emerald-500/40 transition-all duration-300 flex items-center gap-4 group shadow-xl"
             >
               <div className="p-3.5 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 group-hover:bg-emerald-500 group-hover:text-neutral-950 transition-colors">
@@ -101,7 +101,7 @@ export default function ContactSection() {
                   Email Directly
                 </span>
                 <span className="text-sm sm:text-base font-bold text-white group-hover:text-emerald-400 transition-colors">
-                  shresthasiddhant128@gmail.com
+                  sidd.hant.1793@gmail.com
                 </span>
               </div>
             </a>
@@ -165,7 +165,7 @@ export default function ContactSection() {
           {/* Contact Form Container (7 Cols) */}
           <div className="lg:col-span-7">
             <div className="p-8 md:p-10 rounded-3xl border border-white/10 bg-neutral-900/50 backdrop-blur-xl shadow-2xl space-y-6">
-              
+
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-2xl font-bold text-white">

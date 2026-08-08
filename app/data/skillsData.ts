@@ -19,7 +19,7 @@ export const skillsCategories: SkillCategory[] = [
   {
     title: 'Backend & CMS Systems',
     skills: [
-      { name: 'PHP' },
+      { name: 'Nest Js' },
       { name: 'WordPress' },
       { name: 'Laravel' },
       { name: 'Django' },

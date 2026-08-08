@@ -80,7 +80,7 @@ export default function ResumePage() {
       {/* Main Resume Sheet */}
       <section className="py-8 px-4 sm:px-8 max-w-4xl mx-auto relative z-10 print:py-0 print:px-0">
         <div className="rounded-3xl border border-white/10 bg-neutral-900/60 p-8 sm:p-12 shadow-2xl space-y-10 print:shadow-none print:border-none print:p-0 print:bg-white print:text-black">
-          
+
           {/* Breadcrumb Schema */}
           <script
             type="application/ld+json"
@@ -118,9 +118,9 @@ export default function ResumePage() {
             </div>
 
             <div className="flex flex-col gap-2 text-xs sm:text-sm text-gray-300 print:text-slate-800">
-              <a href="mailto:shresthasiddhant128@gmail.com" className="flex items-center gap-2 hover:text-emerald-400">
+              <a href="mailto:sidd.hant.1793@gmail.com" className="flex items-center gap-2 hover:text-emerald-400">
                 <Mail className="w-4 h-4 text-emerald-400" />
-                <span>shresthasiddhant128@gmail.com</span>
+                <span>sidd.hant.1793@gmail.com</span>
               </a>
               <a href="tel:+9779860674871" className="flex items-center gap-2 hover:text-emerald-400">
                 <Phone className="w-4 h-4 text-emerald-400" />

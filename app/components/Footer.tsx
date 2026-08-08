@@ -37,13 +37,13 @@ export default function Footer() {
 
   return (
     <footer className="bg-neutral-950 text-white relative pt-20 pb-10 border-t border-white/10 overflow-hidden">
-      
+
       {/* Background Glow Blobs */}
       <div className="absolute top-0 right-1/3 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[180px] pointer-events-none opacity-40"></div>
       <div className="absolute bottom-0 left-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-[140px] pointer-events-none opacity-30"></div>
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-        
+
         {/* Pre-Footer CTA Banner Card */}
         <div className="mb-20 p-8 sm:p-12 rounded-3xl border border-white/10 bg-gradient-to-r from-neutral-900/90 via-neutral-900/60 to-emerald-950/40 backdrop-blur-xl shadow-2xl relative overflow-hidden flex flex-col md:flex-row justify-between items-start md:items-center gap-8 group">
           <div className="space-y-3 max-w-2xl">
@@ -79,7 +79,7 @@ export default function Footer() {
 
         {/* 3-Column Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
-          
+
           {/* Column 1: Brand & Profile (5 Cols) */}
           <div className="lg:col-span-5 space-y-4">
             <Link href="/#home" className="flex items-center gap-3 group w-fit">
@@ -140,11 +140,11 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white">
               Connect Directly
             </h4>
-            
+
             <div className="space-y-2 text-xs text-gray-300">
-              <a href="mailto:shresthasiddhant128@gmail.com" className="flex items-center gap-2 hover:text-emerald-400 transition-colors">
+              <a href="mailto:sidd.hant.1793@gmail.com" className="flex items-center gap-2 hover:text-emerald-400 transition-colors">
                 <Mail className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span className="truncate">shresthasiddhant128@gmail.com</span>
+                <span className="truncate">sidd.hant.1793@gmail.com</span>
               </a>
               <a href="tel:+9779860674871" className="flex items-center gap-2 hover:text-emerald-400 transition-colors">
                 <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
@@ -199,10 +199,10 @@ export default function Footer() {
               Designed & Developed by <span className="text-fuchsia-400 font-semibold"><Link href={"https://www.pujan-joshi.com.np/"} target="_blank" rel="noopener noreferrer">Pujan Joshi</Link></span>
             </p>
           </div>
-          
+
           <div className="flex items-center gap-4">
             <span className="hidden sm:inline text-gray-400">Engineered with Next.js Turbopack & Tailwind CSS</span>
-            
+
             <button
               onClick={scrollToTop}
               className="p-3 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-neutral-950 font-bold transition-all shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40 hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-1.5"
