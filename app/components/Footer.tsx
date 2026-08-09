@@ -195,9 +195,7 @@ export default function Footer() {
           <div className="flex flex-wrap items-center gap-2 text-center md:text-left">
             <p>© {new Date().getFullYear()} Siddhant Shrestha. All rights reserved.</p>
             <span className="hidden md:inline text-gray-600">•</span>
-            <p className="text-gray-400">
-              Designed & Developed by <span className="text-fuchsia-400 font-semibold"><Link href={"https://www.pujan-joshi.com.np/"} target="_blank" rel="noopener noreferrer">Pujan Joshi</Link></span>
-            </p>
+
           </div>
 
           <div className="flex items-center gap-4">
